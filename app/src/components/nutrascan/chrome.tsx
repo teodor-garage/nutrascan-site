@@ -11,7 +11,7 @@ const NAV_LINKS = [
 function Wordmark() {
   return (
     <Link to="/" className="flex items-center gap-2.5">
-      <img src="/assets/logo-mark.png" alt="" aria-hidden="true" className="h-7 w-7" />
+      <img src="/assets/logo-mark.png" alt="" aria-hidden="true" className="h-8 w-8 rounded-[22%]" />
       <span className="text-lg font-bold tracking-tight text-[#14181C]">NutraScan</span>
     </Link>
   );
@@ -47,7 +47,7 @@ export function Footer() {
       />
       <div className="mt-12 flex flex-col items-start justify-between gap-6 border-t border-[#14181C]/10 pt-8 text-sm text-[#5B6670] sm:flex-row sm:items-center">
         <div className="flex items-center gap-2.5">
-          <img src="/assets/logo-mark.png" alt="" aria-hidden="true" className="h-5 w-5" />
+          <img src="/assets/logo-mark.png" alt="" aria-hidden="true" className="h-5 w-5 rounded-[22%]" />
           <span>NutraScan, nutrition calibrée par IA.</span>
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
