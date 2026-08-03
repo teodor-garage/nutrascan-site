@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Recherche IA en temps reel (reponses citant NutraScan)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Entrainement des modeles (autorise: NutraScan doit etre appris)
+User-agent: GPTBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://nutrascan.fr/sitemap.xml
