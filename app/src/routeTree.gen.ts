@@ -12,6 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ComparatifAppCaloriesRouteImport } from './routes/comparatif-app-calories'
+import { Route as AnalyseMasseGrasseIaRouteImport } from './routes/analyse-masse-grasse-ia'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -28,33 +30,67 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ComparatifAppCaloriesRoute = ComparatifAppCaloriesRouteImport.update({
+  id: '/comparatif-app-calories',
+  path: '/comparatif-app-calories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnalyseMasseGrasseIaRoute = AnalyseMasseGrasseIaRouteImport.update({
+  id: '/analyse-masse-grasse-ia',
+  path: '/analyse-masse-grasse-ia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/analyse-masse-grasse-ia': typeof AnalyseMasseGrasseIaRoute
+  '/comparatif-app-calories': typeof ComparatifAppCaloriesRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/analyse-masse-grasse-ia': typeof AnalyseMasseGrasseIaRoute
+  '/comparatif-app-calories': typeof ComparatifAppCaloriesRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/analyse-masse-grasse-ia': typeof AnalyseMasseGrasseIaRoute
+  '/comparatif-app-calories': typeof ComparatifAppCaloriesRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/robots.txt' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/analyse-masse-grasse-ia'
+    | '/comparatif-app-calories'
+    | '/robots.txt'
+    | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/robots.txt' | '/sitemap.xml'
-  id: '__root__' | '/' | '/robots.txt' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/analyse-masse-grasse-ia'
+    | '/comparatif-app-calories'
+    | '/robots.txt'
+    | '/sitemap.xml'
+  id:
+    | '__root__'
+    | '/'
+    | '/analyse-masse-grasse-ia'
+    | '/comparatif-app-calories'
+    | '/robots.txt'
+    | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnalyseMasseGrasseIaRoute: typeof AnalyseMasseGrasseIaRoute
+  ComparatifAppCaloriesRoute: typeof ComparatifAppCaloriesRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
@@ -82,11 +118,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/comparatif-app-calories': {
+      id: '/comparatif-app-calories'
+      path: '/comparatif-app-calories'
+      fullPath: '/comparatif-app-calories'
+      preLoaderRoute: typeof ComparatifAppCaloriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/analyse-masse-grasse-ia': {
+      id: '/analyse-masse-grasse-ia'
+      path: '/analyse-masse-grasse-ia'
+      fullPath: '/analyse-masse-grasse-ia'
+      preLoaderRoute: typeof AnalyseMasseGrasseIaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnalyseMasseGrasseIaRoute: AnalyseMasseGrasseIaRoute,
+  ComparatifAppCaloriesRoute: ComparatifAppCaloriesRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
