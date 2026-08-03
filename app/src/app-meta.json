@@ -1,7 +1,7 @@
 {
-  "og_title": null,
-  "og_description": null,
-  "og_image_url": null,
-  "favicon_url": null,
+  "og_title": "NutraScan : calories, masse grasse et menus par IA",
+  "og_description": "NutraScan analyse tes repas, ta masse grasse et tes calories par intelligence artificielle. Scan photo, code-barres, coach IA et menus adaptés a ton objectif.",
+  "og_image_url": "/assets/og-home.jpg",
+  "favicon_url": "/assets/favicon.ico",
   "og_video_url": null
 }

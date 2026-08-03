@@ -111,3 +111,62 @@
     border-color: var(--hf-color-border-default);
   }
 }
+
+/* --------------------------------------------------------------------
+ * NutraScan brand layer — independent brand for this website build.
+ * Overrides the Quanta/dark scaffold defaults above with the locked
+ * palette + type from app/design-brief.md. Do not reach for q-* utilities
+ * or hf-color-* tokens in page components below this point; use these.
+ * ------------------------------------------------------------------ */
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-ns-bg: #f8f9fb;
+  --color-ns-ink: #14181c;
+  --color-ns-secondary: #5b6670;
+  --color-ns-accent: #2e6b82;
+  --color-ns-accent-soft: #6fa8c1;
+  --color-ns-accent-tint: #eaf3f6;
+}
+
+@layer base {
+  html:has(body.ns-page) {
+    background-color: var(--color-ns-bg);
+    color: var(--color-ns-ink);
+    color-scheme: light;
+  }
+
+  body.ns-page {
+    background-color: var(--color-ns-bg);
+    color: var(--color-ns-ink);
+    font-family: var(--font-sans);
+  }
+
+  body.ns-page * {
+    border-color: color-mix(in srgb, var(--color-ns-ink) 10%, transparent);
+  }
+}
+
+@keyframes ns-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ns-animate-rise {
+  animation: ns-rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ns-animate-rise {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
