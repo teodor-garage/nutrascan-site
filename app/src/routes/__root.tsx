@@ -19,7 +19,7 @@ declare const __HF_DESIGN_INSPECTOR__: boolean;
 const DEFAULT_TITLE = "NutraScan : calories, masse grasse et menus par IA";
 const DEFAULT_DESCRIPTION =
   "NutraScan analyse tes repas, ta masse grasse et tes calories par intelligence artificielle.";
-const SITE_URL = "https://nutrascan.app";
+const SITE_URL = "https://nutrascan.fr";
 
 type AppMeta = {
   og_title?: string | null;
