@@ -3,6 +3,7 @@ import { Nav, Footer } from "../components/nutrascan/chrome";
 import { DownloadPill } from "../components/nutrascan/cta";
 import { ComparisonTable, type ComparisonRow } from "../components/nutrascan/comparison-table";
 import { Faq, type FaqItem } from "../components/nutrascan/faq";
+import { Reveal } from "../components/nutrascan/reveal";
 import { StructuredData } from "../components/StructuredData";
 import { SITE_URL } from "../components/nutrascan/constants";
 
@@ -127,7 +128,7 @@ function ComparatifPage() {
           </div>
         </section>
 
-        <section className="border-t border-[#14181C]/10 py-12">
+        <Reveal className="border-t border-[#14181C]/10 py-12">
           <ComparisonTable rows={ROWS} />
           <p className="mt-4 text-xs leading-relaxed text-[#5B6670]">
             Comparatif basé sur les fonctionnalités publiques de chaque
@@ -135,9 +136,9 @@ function ComparatifPage() {
             les fonctionnalités actuelles directement sur l'App Store avant
             de choisir.
           </p>
-        </section>
+        </Reveal>
 
-        <section className="max-w-3xl border-t border-[#14181C]/10 py-16">
+        <Reveal className="max-w-3xl border-t border-[#14181C]/10 py-16">
           <h2 className="text-3xl font-bold tracking-tight text-[#14181C] sm:text-4xl">
             Pourquoi NutraScan plutôt qu'une app généraliste ?
           </h2>
@@ -149,11 +150,11 @@ function ComparatifPage() {
             manuelle) et relier ce suivi à une vraie mesure de composition
             corporelle, pas seulement au poids sur la balance.
           </p>
-        </section>
+        </Reveal>
 
-        <div className="border-t border-[#14181C]/10 py-16">
+        <Reveal className="border-t border-[#14181C]/10 py-16">
           <Faq items={FAQ} title="Questions fréquentes sur le comparatif" />
-        </div>
+        </Reveal>
       </main>
 
       <Footer />

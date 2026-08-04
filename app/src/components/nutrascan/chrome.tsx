@@ -105,7 +105,7 @@ export function Nav() {
           <Link
             key={link.to}
             to={link.to}
-            className="text-sm font-medium text-[#5B6670] transition-colors hover:text-[#14181C]"
+            className="ns-nav-link text-sm font-medium text-[#5B6670] transition-colors hover:text-[#14181C]"
             activeProps={{ className: "text-[#14181C]" }}
           >
             {link.label}

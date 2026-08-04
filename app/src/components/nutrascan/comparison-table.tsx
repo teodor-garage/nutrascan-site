@@ -12,7 +12,9 @@ const COMPETITORS = ["NutraScan", "MyFitnessPal", "Cronometer", "Lose It!"] as c
 function Mark({ yes }: { yes: boolean }) {
   return (
     <span
-      className={`font-mono text-sm ${yes ? "text-[#2E6B82]" : "text-[#5B6670]/50"}`}
+      className={`inline-block font-mono text-sm transition-transform duration-200 group-hover/row:scale-125 ${
+        yes ? "text-[#2E6B82]" : "text-[#5B6670]/50"
+      }`}
       aria-label={yes ? "Oui" : "Non"}
     >
       {yes ? "✓" : "✕"}
@@ -41,7 +43,12 @@ export function ComparisonTable({ rows }: { rows: ComparisonRow[] }) {
         </thead>
         <tbody>
           {rows.map((row, i) => (
-            <tr key={row.label} className={i % 2 === 0 ? "" : "bg-[#F8F9FB]"}>
+            <tr
+              key={row.label}
+              className={`group/row transition-colors duration-200 hover:bg-[#EAF3F6]/50 ${
+                i % 2 === 0 ? "" : "bg-[#F8F9FB]"
+              }`}
+            >
               <th scope="row" className="px-5 py-4 align-top font-medium text-[#14181C]">
                 {row.label}
                 <p className="mt-1 text-xs font-normal leading-relaxed text-[#5B6670]">{row.detail}</p>

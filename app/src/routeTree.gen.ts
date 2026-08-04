@@ -11,9 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
-import { Route as IndexRouteImport } from './routes/index'
 import { Route as ComparatifAppCaloriesRouteImport } from './routes/comparatif-app-calories'
 import { Route as AnalyseMasseGrasseIaRouteImport } from './routes/analyse-masse-grasse-ia'
+import { Route as IndexRouteImport } from './routes/index'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -25,11 +25,6 @@ const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
   path: '/robots.txt',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ComparatifAppCaloriesRoute = ComparatifAppCaloriesRouteImport.update({
   id: '/comparatif-app-calories',
   path: '/comparatif-app-calories',
@@ -38,6 +33,11 @@ const ComparatifAppCaloriesRoute = ComparatifAppCaloriesRouteImport.update({
 const AnalyseMasseGrasseIaRoute = AnalyseMasseGrasseIaRouteImport.update({
   id: '/analyse-masse-grasse-ia',
   path: '/analyse-masse-grasse-ia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -111,13 +111,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RobotsDottxtRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/comparatif-app-calories': {
       id: '/comparatif-app-calories'
       path: '/comparatif-app-calories'
@@ -130,6 +123,13 @@ declare module '@tanstack/react-router' {
       path: '/analyse-masse-grasse-ia'
       fullPath: '/analyse-masse-grasse-ia'
       preLoaderRoute: typeof AnalyseMasseGrasseIaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }

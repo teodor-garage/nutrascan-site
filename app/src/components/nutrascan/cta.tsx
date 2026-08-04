@@ -40,7 +40,7 @@ export function FramedLink({ href, children }: { href: string; children: ReactNo
   return (
     <a
       href={href}
-      className="inline-flex items-center gap-2 rounded-2xl border border-[#2E6B82] px-5 py-3 text-sm font-semibold text-[#2E6B82] transition-colors hover:bg-[#EAF3F6]"
+      className="inline-flex items-center gap-2 rounded-2xl border border-[#2E6B82] px-5 py-3 text-sm font-semibold text-[#2E6B82] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#EAF3F6] hover:shadow-[0_10px_25px_-12px_rgba(46,107,130,0.35)]"
     >
       {children}
     </a>

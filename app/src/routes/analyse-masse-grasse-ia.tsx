@@ -3,6 +3,7 @@ import { Nav, Footer } from "../components/nutrascan/chrome";
 import { DownloadPill } from "../components/nutrascan/cta";
 import { Counter } from "../components/nutrascan/counter";
 import { Faq, type FaqItem } from "../components/nutrascan/faq";
+import { Reveal } from "../components/nutrascan/reveal";
 import { StructuredData } from "../components/StructuredData";
 import { SITE_URL } from "../components/nutrascan/constants";
 
@@ -139,23 +140,28 @@ function MasseGrassePage() {
         </section>
 
         {/* How it works */}
-        <section className="border-t border-[#14181C]/10 py-16">
+        <Reveal className="border-t border-[#14181C]/10 py-16">
           <h2 className="text-3xl font-bold tracking-tight text-[#14181C] sm:text-4xl">
             Comment fonctionne l'analyse de masse grasse par IA
           </h2>
           <div className="mt-10 grid gap-10 sm:grid-cols-3">
             {STEPS.map((step) => (
-              <div key={step.n} className="border-l-2 border-[#2E6B82]/20 pl-5">
-                <span className="font-mono text-sm text-[#2E6B82]">{step.n}</span>
+              <div
+                key={step.n}
+                className="group border-l-2 border-[#2E6B82]/20 pl-5 transition-colors duration-300 hover:border-[#2E6B82]"
+              >
+                <span className="font-mono text-sm text-[#2E6B82] transition-transform duration-300 inline-block group-hover:translate-x-1">
+                  {step.n}
+                </span>
                 <h3 className="mt-2 text-lg font-semibold text-[#14181C]">{step.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-[#5B6670]">{step.body}</p>
               </div>
             ))}
           </div>
-        </section>
+        </Reveal>
 
         {/* Katch-McArdle explainer with signature counter */}
-        <section className="grid gap-10 rounded-[32px] border border-[#14181C]/10 bg-white p-8 sm:p-12 lg:grid-cols-2 lg:items-center">
+        <Reveal className="grid gap-10 rounded-[32px] border border-[#14181C]/10 bg-white p-8 sm:p-12 lg:grid-cols-2 lg:items-center">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-[#14181C] sm:text-4xl">
               Ta masse maigre calcule ta vraie cible calorique.
@@ -188,10 +194,10 @@ function MasseGrassePage() {
               </div>
             </div>
           </div>
-        </section>
+        </Reveal>
 
         {/* Honesty / accuracy — direct answer to a real query */}
-        <section className="max-w-3xl border-t border-[#14181C]/10 py-16">
+        <Reveal className="max-w-3xl border-t border-[#14181C]/10 py-16">
           <h2 className="text-3xl font-bold tracking-tight text-[#14181C] sm:text-4xl">
             Quelle est la précision de cette estimation ?
           </h2>
@@ -203,11 +209,11 @@ function MasseGrassePage() {
             téléphone, à répéter régulièrement. Elle ne remplace pas un avis
             médical ou une mesure clinique.
           </p>
-        </section>
+        </Reveal>
 
-        <div className="border-t border-[#14181C]/10 py-16">
+        <Reveal className="border-t border-[#14181C]/10 py-16">
           <Faq items={FAQ} title="Questions fréquentes sur l'analyse masse grasse" />
-        </div>
+        </Reveal>
       </main>
 
       <Footer />

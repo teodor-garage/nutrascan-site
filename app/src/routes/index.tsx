@@ -3,6 +3,7 @@ import { Nav, Footer } from "../components/nutrascan/chrome";
 import { DownloadPill, ArrowLink, FramedLink } from "../components/nutrascan/cta";
 import { Icon } from "../components/nutrascan/icons";
 import { Faq, type FaqItem } from "../components/nutrascan/faq";
+import { Reveal } from "../components/nutrascan/reveal";
 import { StructuredData } from "../components/StructuredData";
 import { APP_STORE_URL, SITE_URL } from "../components/nutrascan/constants";
 
@@ -130,7 +131,7 @@ function Index() {
         </section>
 
         {/* Entity clarity strip — direct-answer, first ~100 words */}
-        <section className="max-w-3xl border-t border-[#14181C]/10 py-10">
+        <Reveal className="max-w-3xl border-t border-[#14181C]/10 py-10">
           <p className="text-lg leading-relaxed text-[#14181C]">
             <strong>NutraScan</strong> est une application iPhone de nutrition qui
             utilise l'intelligence artificielle pour trois choses : lire le
@@ -139,10 +140,10 @@ function Index() {
             construire un menu quotidien calculé sur ta cible calorique
             réelle. L'app est conçue et pensée pour le marché français.
           </p>
-        </section>
+        </Reveal>
 
         {/* Masse grasse teaser — off-grid editorial, oversized numeral */}
-        <section className="relative overflow-hidden rounded-[32px] bg-[#EAF3F6] px-6 py-16 sm:px-14 sm:py-20">
+        <Reveal className="relative overflow-hidden rounded-[32px] bg-[#EAF3F6] px-6 py-16 sm:px-14 sm:py-20">
           <span
             aria-hidden="true"
             className="pointer-events-none absolute -right-6 top-1/2 -translate-y-1/2 select-none font-mono text-[280px] font-bold leading-none text-[#2E6B82]/10 sm:text-[380px]"
@@ -164,10 +165,10 @@ function Index() {
               </ArrowLink>
             </div>
           </div>
-        </section>
+        </Reveal>
 
         {/* Features bento */}
-        <section className="py-16">
+        <Reveal className="py-16">
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#2E6B82]">
             Fonctionnalités
           </span>
@@ -178,31 +179,36 @@ function Index() {
             {FEATURES.map((f, i) => (
               <article
                 key={f.title}
-                className={`overflow-hidden rounded-3xl border border-[#14181C]/10 bg-white ${
+                className={`group overflow-hidden rounded-3xl border border-[#14181C]/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#2E6B82]/40 hover:shadow-[0_20px_45px_-20px_rgba(20,24,28,0.18)] ${
                   i === 0 ? "lg:col-span-3" : i === 1 ? "lg:col-span-3" : "lg:col-span-2"
                 }`}
               >
-                <img
-                  src={f.image}
-                  alt=""
-                  aria-hidden="true"
-                  className="h-40 w-full object-cover"
-                  width={1000}
-                  height={746}
-                  loading="lazy"
-                />
+                <div className="h-40 w-full overflow-hidden">
+                  <img
+                    src={f.image}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]"
+                    width={1000}
+                    height={746}
+                    loading="lazy"
+                  />
+                </div>
                 <div className="p-6">
-                  <Icon name={f.icon} className="h-6 w-6" />
+                  <Icon
+                    name={f.icon}
+                    className="h-6 w-6 text-[#2E6B82] transition-transform duration-300 group-hover:-translate-y-0.5"
+                  />
                   <h3 className="mt-4 text-lg font-semibold text-[#14181C]">{f.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-[#5B6670]">{f.body}</p>
                 </div>
               </article>
             ))}
           </div>
-        </section>
+        </Reveal>
 
         {/* Comparison teaser */}
-        <section className="grid gap-10 border-t border-[#14181C]/10 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <Reveal className="grid gap-10 border-t border-[#14181C]/10 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-[#14181C] sm:text-4xl">
               Quelle app choisir pour suivre ses calories avec l'IA ?
@@ -223,8 +229,11 @@ function Index() {
               { k: "Coach nutrition IA", v: "Exclusif à NutraScan" },
               { k: "Scan de repas par photo", v: "Inclus dans NutraScan" },
             ].map((item) => (
-              <li key={item.k} className="flex items-center gap-4 p-5">
-                <Icon name="check" className="h-5 w-5 shrink-0" />
+              <li
+                key={item.k}
+                className="flex items-center gap-4 p-5 transition-colors duration-200 hover:bg-[#EAF3F6]/60"
+              >
+                <Icon name="check" className="h-5 w-5 shrink-0 text-[#2E6B82]" />
                 <div>
                   <p className="text-sm font-semibold text-[#14181C]">{item.k}</p>
                   <p className="mt-0.5 text-xs text-[#5B6670]">{item.v}</p>
@@ -232,11 +241,11 @@ function Index() {
               </li>
             ))}
           </ul>
-        </section>
+        </Reveal>
 
-        <div className="border-t border-[#14181C]/10 py-16">
+        <Reveal className="border-t border-[#14181C]/10 py-16">
           <Faq items={HOME_FAQ} />
-        </div>
+        </Reveal>
       </main>
 
       <Footer />

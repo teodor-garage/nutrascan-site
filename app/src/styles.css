@@ -170,3 +170,45 @@
     transform: none;
   }
 }
+
+/* Scroll reveal — transform only, opacity is never touched so text stays
+   fully visible/extractable even with JS disabled or before the observer
+   fires (a slightly unsettled position, never hidden content). */
+.ns-reveal {
+  transform: translateY(22px) scale(0.985);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.ns-reveal.is-in {
+  transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ns-reveal {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Nav link underline sweep — same signature motif as the primary CTA pill,
+   reused for a consistent interaction language across the chrome. */
+.ns-nav-link {
+  position: relative;
+}
+
+.ns-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -4px;
+  height: 1.5px;
+  background: var(--color-ns-accent-soft, #6fa8c1);
+  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ns-nav-link:hover::after,
+.ns-nav-link[data-status="active"]::after {
+  right: 0;
+}
