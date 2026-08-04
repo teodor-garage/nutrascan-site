@@ -4,6 +4,7 @@ import { DownloadPill, ArrowLink, FramedLink } from "../components/nutrascan/cta
 import { Icon } from "../components/nutrascan/icons";
 import { Faq, type FaqItem } from "../components/nutrascan/faq";
 import { Reveal } from "../components/nutrascan/reveal";
+import { ScanField } from "../components/nutrascan/scan-field";
 import { StructuredData } from "../components/StructuredData";
 import { APP_STORE_URL, SITE_URL } from "../components/nutrascan/constants";
 
@@ -113,11 +114,11 @@ function Index() {
               intelligence artificielle, directement depuis ton iPhone.
             </p>
             <div className="mt-8">
-              <DownloadPill />
+              <DownloadPill magnetic />
             </div>
           </div>
           <div
-            className="ns-animate-rise overflow-hidden rounded-[28px]"
+            className="ns-animate-rise relative overflow-hidden rounded-[28px]"
             style={{ animationDelay: "120ms" }}
           >
             <img
@@ -127,6 +128,7 @@ function Index() {
               width={1800}
               height={1017}
             />
+            <ScanField />
           </div>
         </section>
 
