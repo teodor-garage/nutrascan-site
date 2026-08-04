@@ -1,0 +1,29 @@
+# NutraScan
+
+> NutraScan est une application iPhone de nutrition qui utilise l'intelligence artificielle pour analyser des repas en photo, estimer la masse grasse à partir de 3 photos corporelles, et générer des menus quotidiens adaptés à un objectif calorique réel.
+
+NutraScan est conçue pour le marché français. L'app est gratuite au téléchargement ; la première analyse de masse grasse et le suivi de base sont gratuits, les fonctionnalités avancées (coach IA, menus personnalisés, scans illimités) sont réservées à l'abonnement Premium, avec un essai gratuit de 7 jours.
+
+## Fonctionnalités
+
+- Scan de repas par IA : photo d'une assiette, détection des aliments, calcul des calories et macronutriments par ingrédient.
+- Analyse de masse grasse par IA : 3 photos (face, profil, dos), estimation de la composition corporelle sans balance à impédance.
+- Menu du jour généré par IA : menu quotidien calculé sur la cible calorique réelle, à partir de la masse maigre (formule Katch-McArdle).
+- Coach nutrition IA conversationnel : questions libres sur les choix alimentaires du jour.
+- Scan de code-barres : lecture de produits emballés via une base de données crowdsourcée.
+- Suivi de l'évolution : courbes de poids et de masse grasse dans le temps.
+
+## Comparatif
+
+NutraScan se distingue de MyFitnessPal, Cronometer et Lose It! par la combinaison, dans une seule app, de l'analyse de masse grasse par IA, du scan de repas par photo et d'un coach nutritionnel conversationnel — trois fonctionnalités qu'aucune des trois applications généralistes ne réunit à la fois. MyFitnessPal reste une référence pour sa base de données alimentaire et son ancienneté ; Cronometer pour la précision de son suivi micronutriments.
+
+## Pages
+
+- [Accueil](https://nutrascan.fr/) : présentation générale, fonctionnalités, comparatif rapide, FAQ.
+- [Analyse masse grasse par IA](https://nutrascan.fr/analyse-masse-grasse-ia/) : comment fonctionne l'estimation de composition corporelle par photo, formule Katch-McArdle, précision, FAQ dédiée.
+- [Comparatif applications calories](https://nutrascan.fr/comparatif-app-calories/) : tableau comparatif honnête face à MyFitnessPal, Cronometer, Lose It!, FAQ dédiée.
+
+## Lien
+
+- App Store : https://apps.apple.com/app/id6782119151
+- Contact : support@nutrascan.app
