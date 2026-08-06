@@ -1,0 +1,28 @@
+{
+  "rule": "GEO honesty rule: no invented stats/numbers. Every article must open with a direct answer in the first ~100 words, use real question-shaped H2s, include a short-answer FAQ section with Organization+Article+FAQPage JSON-LD, and only claim features NutraScan actually has (cross-check against project_nutrascan.md memory before writing if unsure). Reuse an existing /assets/*.jpg for og:image/hero, never invent a new image.",
+  "topics": [
+    {
+      "slug": "formule-katch-mcardle-calories",
+      "title": "Formule Katch-McArdle : comment elle calcule tes calories ?",
+      "status": "published",
+      "published_at": "2026-08-06"
+    },
+    { "slug": "masse-grasse-sans-balance", "title": "Comment calculer sa masse grasse sans balance impedancemetre ?", "status": "pending" },
+    { "slug": "masse-grasse-vs-poids", "title": "Masse grasse vs poids : pourquoi ce n'est pas la meme chose ?", "status": "pending" },
+    { "slug": "perdre-masse-grasse-sans-perdre-muscle", "title": "Comment perdre de la masse grasse sans perdre de muscle ?", "status": "pending" },
+    { "slug": "bon-pourcentage-masse-grasse", "title": "Quel est un bon pourcentage de masse grasse ?", "status": "pending" },
+    { "slug": "scanner-repas-ia", "title": "Scanner ses repas avec l'IA : comment ca marche ?", "status": "pending" },
+    { "slug": "combien-calories-par-jour-perdre-du-gras", "title": "Combien de calories par jour pour perdre du gras ?", "status": "pending" },
+    { "slug": "impedancemetre-vs-analyse-photo-ia", "title": "Impedancemetre vs analyse par photo IA : quelle precision ?", "status": "pending" },
+    { "slug": "suivre-evolution-composition-corporelle", "title": "Comment suivre son evolution de composition corporelle ?", "status": "pending" },
+    { "slug": "pourquoi-le-poids-seul-ne-suffit-pas", "title": "Pourquoi le poids seul ne suffit pas pour suivre sa progression ?", "status": "pending" },
+    { "slug": "comment-ia-estime-masse-grasse-photo", "title": "Comment l'IA estime la masse grasse a partir d'une photo ?", "status": "pending" },
+    { "slug": "menu-ia-personnalise", "title": "Menu quotidien genere par IA : comment ca fonctionne ?", "status": "pending" },
+    { "slug": "masse-grasse-homme-femme", "title": "Masse grasse homme vs femme : quelles differences ?", "status": "pending" },
+    { "slug": "comment-savoir-deficit-calorique", "title": "Comment savoir si on est en deficit calorique ?", "status": "pending" },
+    { "slug": "application-gratuite-masse-grasse", "title": "Application gratuite pour suivre sa masse grasse ?", "status": "pending" },
+    { "slug": "coach-nutrition-ia-a-quoi-ca-sert", "title": "Coach nutrition IA conversationnel : a quoi ca sert vraiment ?", "status": "pending" },
+    { "slug": "combien-de-temps-voir-difference-masse-grasse", "title": "Combien de temps pour voir une difference de masse grasse ?", "status": "pending" },
+    { "slug": "scan-code-barres-nutrition", "title": "Scanner un code-barres pour suivre ses calories : comment ca marche ?", "status": "pending" }
+  ]
+}
