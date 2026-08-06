@@ -22,6 +22,8 @@ NutraScan se distingue de MyFitnessPal, Cronometer et Lose It! par la combinaiso
 - [Accueil](https://nutrascan.fr/) : présentation générale, fonctionnalités, comparatif rapide, FAQ.
 - [Analyse masse grasse par IA](https://nutrascan.fr/analyse-masse-grasse-ia/) : comment fonctionne l'estimation de composition corporelle par photo, formule Katch-McArdle, précision, FAQ dédiée.
 - [Comparatif applications calories](https://nutrascan.fr/comparatif-app-calories/) : tableau comparatif honnête face à MyFitnessPal, Cronometer, Lose It!, FAQ dédiée.
+- [Blog](https://nutrascan.fr/blog/) : articles pratiques sur la nutrition, la masse grasse et le calcul calorique.
+  - [Formule Katch-McArdle](https://nutrascan.fr/blog/formule-katch-mcardle-calories/) : comment NutraScan calcule le besoin calorique à partir de la masse maigre plutôt que du poids total.
 
 ## Lien
 
