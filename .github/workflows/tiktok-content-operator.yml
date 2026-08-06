@@ -1,0 +1,46 @@
+name: TikTok content operator
+
+on:
+  schedule:
+    # 9h / 14h / 19h Europe/Bucharest (EEST, UTC+3) -> 6h / 11h / 16h UTC
+    - cron: "0 6 * * *"
+    - cron: "0 11 * * *"
+    - cron: "0 16 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tiktok-content-operator
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ffmpeg
+          pip install requests Pillow
+
+      - name: Configure git
+        run: |
+          git config user.name "nutrascan-content-bot"
+          git config user.email "content-bot@nutrascan.fr"
+
+      - name: Run content operator
+        working-directory: content-ops/tiktok-bot
+        env:
+          BUFFER_TOKEN: ${{ secrets.BUFFER_TOKEN }}
+        run: python3 post_to_buffer.py
